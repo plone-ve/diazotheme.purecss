@@ -1,0 +1,13 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:five="http://namespaces.zope.org/five"
+    xmlns:browser="http://namespaces.zope.org/browser"
+    xmlns:plone="http://namespaces.plone.org/plone"
+    i18n_domain="diazotheme.framework.purecss">
+
+  <five:registerPackage package="." initialize=".initialize" />
+
+  <plone:static directory="theme" name="purecss" type="theme"/>
+  <plone:static directory="starter" name="purecss-starter" type="theme"/>
+    
+</configure>

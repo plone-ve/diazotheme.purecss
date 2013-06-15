@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rules xmlns="http://namespaces.plone.org/diazo"
+       xmlns:css="http://namespaces.plone.org/diazo/css"
+       xmlns:xhtml="http://www.w3.org/1999/xhtml"
+       xmlns:xsl="http://www.w3.org/1999/XSL/Transform"    
+       xmlns:xi="http://www.w3.org/2001/XInclude">
+
+  <notheme if-content="not(/html/body/div[@id='visual-portal-wrapper'])"/>     
+  <theme href="/++theme++purecss-marketing/index.html"/>
+
+  <!-- Clean theme
+       ================================================================== -->
+  <drop theme="/html/head/script"/>
+  <drop theme="/html/body/script"/>
+
+  <!-- Head rules
+       ================================================================== -->
+  <xi:include href="/++framework++plone/rules/head/base.xml"/>
+  <xi:include href="/++framework++plone/rules/head/icons.xml"/>
+  <xi:include href="/++framework++purecss/rules/head/responsive.xml"/>
+  <xi:include href="/++framework++plone/rules/head/js.xml"/>
+
+  <!-- Body rules
+       ================================================================== -->
+  <xi:include href="/++framework++purecss/rules/body/responsive.xml"/>
+  <xi:include href="/++framework++purecss/rules/body/columns.xml"/>
+  <xi:include href="/++framework++purecss/rules/body/forms.xml"/>
+  <xi:include href="/++framework++purecss/rules/body/menu.xml"/>
+  <xi:include href="/++framework++purecss/rules/body/tables.xml"/>
+
+  <xi:include href="/++framework++purecss/rules/body/edit.xml"/>
+  <xi:include href="/++framework++plone/rules/utility/toolbar.xml"/>
+  <xi:include href="/++framework++purecss/rules/body/base.xml"/>
+  <xi:include href="/++framework++plone/rules/logo/black-32.xml"/>
+  
+  <xsl:variable name="toolbar" css:select="#plone-toolbar"/> 
+  <rules if-content="$toolbar">
+    <copy attributes="dir" theme="/html/body" content="/html/body"/>
+    <merge attributes="class" theme="/html/body" content="/html/body"/>
+  </rules>
+  <rules if-content="not($toolbar)">
+    <copy attributes="*" theme="/html/body" content="/html/body"/>
+  </rules>
+  
+  <!-- Place the content 
+       .................................................................. -->
+  <xsl:variable name="logo" css:select="#portal-logo"/>
+  <replace css:theme=".pure-menu-heading">
+      <a class="pure-menu-heading" href="{$logo/@href}">
+          <xsl:apply-templates select="$logo/img"/>
+      </a>
+  </replace>
+  <copy css:theme=".header > .pure-menu > ul" css:content="#portal-globalnav li"/>
+  <copy css:theme=".splash-head" css:content-children=".documentFirstHeading" method="raw"/>
+  <copy css:theme=".splash-subhead" css:content-children=".documentDescription" method="raw"/>
+  <drop css:content=".documentFirstHeading"/>
+  <drop css:content=".documentDescription"/>
+  <copy css:theme=".content-ribbon:first-child" css:content-children="#portal-columns"/>
+  <copy css:theme=".content-ribbon:nth-child(2) > .pure-u-1-3" css:content="#portal-colophon"/>
+  <copy css:theme=".content-ribbon:nth-child(2) > .pure-u-2-3" css:content="#portal-siteactions"/>
+  <drop css:theme=".content.pure-u-1 > .pure-g-r:not(.content-ribbon)"/>
+  <copy css:theme=".footer" css:content="#portal-footer"/>
+  
+  <!-- <copy theme="/html/body/div[1]/div" content="/html/body/div/*[@id='portal-top']/div/*"/>
+  <copy theme="/html/body/div[2]/div" content="/html/body/div/*[not(@id='portal-top')]"/> -->
+</rules>
