@@ -23,7 +23,7 @@ setup(name='diazotheme.purecss',
       zip_safe=False,
       install_requires=[
           'setuptools',
-          'diazo.framework.purecss',
+          'diazoframework.purecss',
       ],
       entry_points="""
       [z3c.autoinclude.plugin]
