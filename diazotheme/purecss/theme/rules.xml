@@ -25,6 +25,7 @@
   <xi:include href="/++framework++purecss/rules/body/responsive.xml"/>
   <xi:include href="/++framework++purecss/rules/body/columns.xml"/>
   <xi:include href="/++framework++purecss/rules/body/forms.xml"/>
+  <xi:include href="/++framework++purecss/rules/body/search-filter.xml"/>
   <xi:include href="/++framework++purecss/rules/body/menu.xml"/>
   <xi:include href="/++framework++purecss/rules/body/tables.xml"/>
 
