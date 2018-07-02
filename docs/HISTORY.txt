@@ -4,6 +4,9 @@ Changelog
 1.1 (unreleased)
 ----------------
 
+- Disabled the diazo include rule for the plone.app.toolbar utility
+  [macagua]
+
 - Updated the diazo manifest files
   [macagua]
 

@@ -24,7 +24,7 @@
   <xi:include href="/++framework++purecss/rules/body/menu.xml"/>
 
   <xi:include href="/++framework++purecss/rules/body/edit.xml"/>
-  <xi:include href="/++framework++plone/rules/utility/toolbar.xml"/>
+  <!-- <xi:include href="/++framework++plone/rules/utility/toolbar.xml"/> -->
   <xi:include href="/++framework++purecss/rules/body/base.xml"/>
 
   <!-- Place the content 
