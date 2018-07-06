@@ -4,6 +4,9 @@ Changelog
 1.1 (unreleased)
 ----------------
 
+- Updated the diazo preview file
+  [macagua]
+
 - Added improvements about README file
   [macagua]
 
