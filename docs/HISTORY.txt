@@ -4,6 +4,9 @@ Changelog
 1.1 (unreleased)
 ----------------
 
+- Changed the JS URL for YUI v3.10.1 from the YUI CDN into diazoframework.purecss package
+  [macagua]
+
 - Changed the CSS URL for pure v0.1.0 from the YUI CDN into diazoframework.purecss package
   [macagua]
 
