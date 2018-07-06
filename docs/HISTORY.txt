@@ -4,6 +4,9 @@ Changelog
 1.1 (unreleased)
 ----------------
 
+- Changed the CSS URL for pure v0.1.0 from the YUI CDN into diazoframework.purecss package
+  [macagua]
+
 - Updated the diazo preview file
   [macagua]
 
