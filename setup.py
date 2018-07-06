@@ -5,11 +5,13 @@ version = '1.1'
 
 setup(name='diazotheme.purecss',
       version=version,
-      description="A Diazo Themes implementation for Pure CSS",
+      description="The Diazo Themes implementation for Pure CSS",
       long_description=open("README.rst").read() + "\n" +
                        open(os.path.join("docs", "HISTORY.txt")).read(),
+      # Get more strings from
+      # https://pypi.org/pypi?:action=list_classifiers
       classifiers=[
-        "Development Status :: 4 - Beta",
+        "Development Status :: 3 - Alpha",
         "Environment :: Web Environment",
         "Framework :: Plone",
         "Framework :: Plone :: 4.1",
