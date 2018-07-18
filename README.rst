@@ -150,25 +150,39 @@ Resources
 This package is the parent of all Plone diazo themes and 
 provides rule that are practical to use in other diazo themes.
 
-The resources of this framework can be reached through
 
-- **PureCSS Starter Theme**
+PureCSS Starter Theme
+---------------------
+
+The resources of this theme can be reached through
+
     ``/++theme++purecss-starter``
-- **PureCSS Theme**
-    ``/++theme++purecss``
 
-There are placed at ``diazotheme.purecss/diazotheme/purecss/`` directory 
-with following resources files:
+There are placed at ``diazotheme.purecss/diazotheme/purecss/starter`` 
+directory with following resources files:
 
 ::
 
     _ starter
-      Provides the resources from *PureCSS Starter Theme*.
+      Provides the resources from "PureCSS Starter Theme".
       _ manifest.cfg
       _ rules.xml
-    
+
+
+PureCSS Theme
+-------------
+
+The resources of this theme can be reached through
+
+    ``/++theme++purecss``
+
+There are placed at ``diazotheme.purecss/diazotheme/purecss/theme`` 
+directory with following resources files:
+
+::
+
     _ theme
-      Provides the resources from *PureCSS Theme*.
+      Provides the resources from "PureCSS Theme".
       _ index.html
       _ manifest.cfg
       _ marketing.css
